@@ -1,0 +1,17 @@
+.nav-space{
+  margin-left: 30%;
+}
+
+a{
+  color: Mediumslateblue!important;
+}
+
+.btn-primary{
+  padding: 9px;
+  margin: 5px;
+  background-color: Mediumslateblue!important;
+}
+
+.home-icon{
+  margin-right: 50%;
+}
