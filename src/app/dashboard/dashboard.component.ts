@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from '../services/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,13 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  user = {id: 1,name: "testing user"}
-
-  constructor() {
-    
-   }
+  constructor(private _dashboardService: DashboardService) {}
 
   ngOnInit() {
+    this.getHomePage()
+  }
+
+  getHomePage() {
+    this._dashboardService.getHomepage().subscribe(res => {
+      if(res.status == 401){
+        console.log("testing1");
+      }
+      else {
+        console.log("testing");
+      }
+    })
   }
 
 }
